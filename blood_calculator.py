@@ -16,6 +16,7 @@ def interface():
     print(choice)
     return choice
 
+
 def HDL_Driver(): 
     hdl_input()
     hdl_analysis()
@@ -24,6 +25,7 @@ def HDL_Driver():
 def hdl_input():
     hdl_value = int(input(("Enter HDL Value: "))
     return hdl_value
+<<<<<<< HEAD
 
 def hdl_analysis(HDL_value):
     if HDL_value >= 60:
@@ -34,3 +36,5 @@ def hdl_analysis(HDL_value):
         return "Low"
 
         
+=======
+>>>>>>> a62de7109249f74e1f1276cdf48c4a1239e7405c
