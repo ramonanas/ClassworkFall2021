@@ -16,6 +16,7 @@ def interface():
     print(choice)
     return choice
 
+
 def HDL_Driver(): 
     hdl_input()
     hdl_analysis()
