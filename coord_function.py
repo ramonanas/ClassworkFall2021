@@ -8,3 +8,4 @@ def coord(tup1, tup2, x):
     b = y1 - (m*x1)
     retY = (m * x) + b
     return retY 
+    
