@@ -21,9 +21,11 @@ def info_input():
     weight_input = input("Enter weight: ")
     return diagnosis, weight_input
 
+
 def unit_conversion(input_lb):
     weight = input_lb / 2.205
     return weight
+
 
 def calculations(diagnosis, weight_input):
     weight_data = weight_input.split(" ")
@@ -36,17 +38,19 @@ def calculations(diagnosis, weight_input):
     dosage_mg_first_day = weight * dosage_mg_per_kg
     return weight, dosage_mg_first_day
 
+
 def data_output(weight, dosage_mg_first_day):
     print("CORRECT DOSAGE")
     print("For a patient weighing {:.1f} kg,".format(weight))
     print("  the correct dosage is {:.1f} mg the first day"
           .format(dosage_mg_first_day))
 
+
 def program_driver():
     diag, w_input = info_input()
     wt, dose_1 = calculations(diag, w_input)
     data_output(wt, dose_1)
 
+
 if __name__ == '__main__':
     program_driver()
-

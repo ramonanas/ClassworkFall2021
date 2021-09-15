@@ -2,6 +2,7 @@ def create_database_entry(patient_name, id_no, age):
     new_patient = [patient_name, id_no, age, []]
     return new_patient
 
+
 def print_database(db):
     locations = ["Room 1", "Room 2", "Room 3", "Room 4", "ER", "Post-Op"]
     for patient, location in zip(db, locations):
@@ -13,10 +14,12 @@ def print_patients_over_age(age, db):
         if patient[2] > age:
             print(patient[0])
 
+
 def get_patient(db, id_no):
     for patient in db:
         if patient[1] == id_no:
-            return patient 
+            return patient
+
 
 def main():
     db = []
@@ -30,15 +33,13 @@ def main():
     db.append(x)
 
     patient_id_tested = 24
-    test_done= ("HDL", 65)
+    test_done = ("HDL", 65)
 
     patient = get_patient(db, patient_id_tested)
     patient[3].append(test_done)
 
     print_database(db)
 
+
 if __name__ == "__main__":
     main()
-
-
-

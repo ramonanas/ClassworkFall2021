@@ -17,19 +17,20 @@ def interface():
             LDL_Driver()
         elif choice == 3:
             Chol_Driver()
-
-
     print(choice)
     return choice
 
-def HDL_Driver(): 
+
+def HDL_Driver():
     HDL_value = hdl_input()
     HDL_character = hdl_analysis(HDL_value)
     hdl_output(HDL_value, HDL_character)
 
+
 def hdl_input():
     hdl_value = int(input(("Enter HDL Value: ")))
     return hdl_value
+
 
 def hdl_analysis(HDL_value):
     if HDL_value >= 60:
@@ -39,18 +40,22 @@ def hdl_analysis(HDL_value):
     else:
         return "Low"
 
+
 def hdl_output(HDL_value, HDL_answer):
     print("The HDL value of {} is considered {}".format(HDL_value, HDL_answer))
     return
+
 
 def LDL_Driver():
     LDL_value = ldl_input()
     LDL_character = ldl_analysis(LDL_value)
     ldl_output(LDL_value, LDL_character)
 
+
 def ldl_input():
     ldl_value = int(input(("Enter LDL Value: ")))
     return ldl_value
+
 
 def ldl_analysis(LDL_value):
     if LDL_value >= 190:
@@ -62,18 +67,23 @@ def ldl_analysis(LDL_value):
     else:
         return "Normal"
 
+
 def ldl_output(LDL_value, LDL_answer):
-    print("The LDL value of {} is considered {}".format(LDL_value, LDL_answer))
+    print("The LDL value of {} is considered {}"
+          .format(LDL_value,  LDL_answer))
     return
 
-def Chol_Driver(): 
+
+def Chol_Driver():
     CHOL_value = chol_input()
     CHOL_character = chol_analysis(CHOL_value)
     chol_output(CHOL_value, CHOL_character)
 
+
 def chol_input():
     chol_value = int(input(("Enter Total Cholestrol Value: ")))
     return chol_value
+
 
 def chol_analysis(CHOL_value):
     if CHOL_value >= 240:
@@ -83,8 +93,12 @@ def chol_analysis(CHOL_value):
     else:
         return "Normal"
 
+
 def chol_output(CHOL_value, CHOL_answer):
-    print("The Total Cholestrol value of {} is considered {}".format(CHOL_value, CHOL_answer))
+    print("The Total Cholestrol value of {} is considered {}"
+          .format(CHOL_value, CHOL_answer))
     return
 
-interface()
+
+if __name__ == "__main__":
+    interface()
