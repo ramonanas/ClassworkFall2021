@@ -8,7 +8,6 @@ def interface():
         print("3 - Cholestrol Analysis")
         print("9 - Quit")
         choice = int(input("Make a choice: "))
-        print(type(choice))
         if choice == 9:
             keep_running = False
         elif choice == 1:
